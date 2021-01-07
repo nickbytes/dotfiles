@@ -7,12 +7,10 @@ rm -rf ~/.vimrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 # gitignore
-GITIGNORE_FILE="~/.gitignore"
-rm -f "$GITIGNORE_FILE"
-ln -s "~/dotfiles/.gitignore_global" "$GITIGNORE_FILE"
+rm -f ~/.gitignore
+ln -s ~/dotfiles/.gitignore_global ~/.gitignore
 
 # gitconfig
-GITCONFIG_FILE="~/.gitconfig"
-rm -f "$GITCONFIG_FILE"
-ln -s "~/dotfiles/.gitconfig" "$GITCONFIG_FILE"
+rm -f ~/.gitconfig
+ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
