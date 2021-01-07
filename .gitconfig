@@ -1,0 +1,57 @@
+[color]
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = green
+
+[user]
+  name = Nick Beattie
+  email = nick@nickbytes.com
+
+[alias]
+  # I stole a ton of these from estrattonbailey :)
+  # add
+  a = add                           # add
+  aa = add .
+  chunkyadd = add --patch           # stage commits chunk by chunk
+
+  #via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
+  recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+
+  # pull --rebase
+  got = "!git pull --rebase origin $(git branch-name)"
+  go = "!git push origin $(git branch-name)"
+  fresh = !git fetch --all && git checkout --no-track -b $1 origin/master && :
+
+  # remote
+  r = remote -v                     # show remotes (verbose)
+
+  # diff
+  d = diff                          # diff unstaged changes
+  dc = diff --cached                # diff staged changes
+  last = diff HEAD^                 # diff last committed change
+
+  # pull
+  pl = pull                         # pull
+
+  # push
+  ps = push                         # push
+
+  # rebase
+  rc = rebase --continue            # continue rebase
+  rs = rebase --skip                # skip rebase
+
+[format]
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
