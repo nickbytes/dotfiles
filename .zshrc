@@ -5,29 +5,8 @@ colors
 # enable colored output from ls, etc. on FreeBSD-based systems
 export CLICOLOR=1
 
-# Find and set branch name var if in git repository.
-function git_prompt_info()
-{
-  branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo " 📡 %{$fg_bold[green]%}$branch%{$reset_color%}"
-  fi
-}
-
-# Enable substitution in the prompt.
-setopt prompt_subst
-
-# Config for prompt. PS1 synonym.
-prompt='%2/ $(git_prompt_info) > '
-
-# Allow exported PS1 variable to override default prompt.
-if ! env | grep -q '^PS1='; then
-  PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
-fi
-
+# g is short for git
+# g alone does git status
 g() {
   if [[ $# -gt 0 ]]; then
     git "$@"
@@ -36,3 +15,11 @@ g() {
   fi
 }
 
+# Make directory and change into it.
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

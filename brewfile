@@ -1,0 +1,10 @@
+# this whole file does nothing yet
+# 'brew tap'
+tap "homebrew/cask"
+tap homebrew/cask-fonts
+cask font-FiraCode-nerd-font
+brew n
+brew zoxide
+brew fzf
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
