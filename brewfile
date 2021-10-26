@@ -1,12 +1,38 @@
-# 'brew tap'
+tap "homebrew/bundle"
 tap "homebrew/cask"
-tap homebrew/cask-fonts
-cask font-FiraCode-nerd-font
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+
+
+
 # https://github.com/tj/n
-brew n
+brew "n"
+
 # https://github.com/ajeetdsouza/zoxide
-brew zoxide
+brew "zoxide"
+
+# https://starship.rs/
+brew "starship"
+
 # https://github.com/junegunn/fzf
-brew fzf
+brew "fzf"
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
+
+# https://github.com/sharkdp/bat
+brew "bat"
+
+# https://github.com/cli/cli
+brew "gh"
+
+cask "kitty"
+cask "figma"
+cask "firefox"
+cask "font-fira-code-nerd-font"
+cask "1password"
+
+# soon
+# brew "koekeishiya/formulae/skhd" 
+# brew "koekeishiya/formulae/yabai"

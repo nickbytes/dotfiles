@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 
-# install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# install homebrew, not working on fresh install
+
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 rm -rf ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
@@ -17,5 +18,5 @@ ln -s ~/dotfiles/.gitignore_global ~/.gitignore
 rm -f ~/.gitconfig
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
-brew bundle
+# brew bundle
 
