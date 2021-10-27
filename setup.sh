@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-# install homebrew, not working on fresh install
-
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Update system
+brew update
+brew upgrade
 
 rm -rf ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
