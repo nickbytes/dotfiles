@@ -32,6 +32,10 @@ cask "figma"
 cask "firefox"
 cask "font-fira-code-nerd-font"
 cask "1password"
+cask "postgres"
+cask "slack"
+cask "spotify"
+cask "visual-studio-code"
 
 # soon
 # brew "koekeishiya/formulae/skhd" 
