@@ -27,6 +27,9 @@ brew "bat"
 # https://github.com/cli/cli
 brew "gh"
 
+# https://github.com/rauchg/wifi-password
+brew "wifi-password"
+
 cask "kitty"
 cask "figma"
 cask "firefox"
